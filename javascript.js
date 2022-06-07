@@ -8,53 +8,55 @@ function computerPlay()
 
 function playRound(playerSelection, computerSelection) 
 {
+    let msg;
     if(playerSelection=='ROCK' && computerSelection=='SCISSORS')
     {
-        console.log("You Won! Rock beats Scissors");
+       msg = "You Won! Rock beats Scissors";
     }
     else if(playerSelection=='ROCK' && computerSelection=='PAPER')
     {
-        console.log("You Lose! Paper beats Rock");
+        msg = "You Lose! Paper beats Rock";
     }
     else if(playerSelection=='ROCK' && computerSelection=='ROCK')
     {
-        console.log("Tie game!");
+        msg = "Tie game!";
     }
     else if(playerSelection=='PAPER' && computerSelection=='ROCK')
     {
-        console.log("You Won! Paper beats Rock");
+        msg = "You Won! Paper beats Rock";
     }
     else if(playerSelection=='PAPER' && computerSelection=='SCISSORS')
     {
-        console.log("You Lose! Scissors beats Paper");
+        msg = "You Lose! Scissors beats Paper";
     }
     else if(playerSelection=='PAPER' && computerSelection=='PAPER')
     {
-        console.log("Tie game!");
+        msg = "Tie game!";
     }
     else if(playerSelection=='SCISSORS' && computerSelection=='PAPER')
     {
-        console.log("You Won! Scissors beats Paper");
+        msg = "You Won! Scissors beats Paper";
     }else if(playerSelection=='SCISSORS' && computerSelection=='ROCK')
     {
-        console.log("You Lose! Rock beats Scissors");
+        msg = "You Lose! Rock beats Scissors";
     }else if(playerSelection=='SCISSORS' && computerSelection=='PAPER')
     {
-        console.log("You Tie!");
+        msg = "You Tie!";
     }
     else {
-        console.log("Invalid Input!");
+        msg = "Invalid Input!";
     }
-
+      return msg;
 }
 
 function game()
 {
     for(i=0;i<5;i++)
     {
-      let playerSelection = prompt('Give your input').toUpperCase();
+      let playerSelection = prompt('Give your input for Round '+i).toUpperCase();
       let computerSelection = computerPlay();
-      playRound(playerSelection, computerSelection);
+      let result = playRound(playerSelection, computerSelection)
+      alert(result);
     }
 }
 
