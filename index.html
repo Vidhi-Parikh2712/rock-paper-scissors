@@ -5,9 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="rps.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap">
 </head>
+<script src="jsbac.js"> </script>
 <body>
-    Rock-Paper-Scissors
+<header> Rock Paper Scissors </header>
+<div class="class1">
+    <p style="font-size:30px;" id="p1"> <strong> Choose your weapon </strong></p>
+    <p style="font-size:20px;font-weight:bold;" id="p2"> First to score 5 points wins the game</p>
+    <div class="score_board" style="font-size:20px;font-weight:bold;">
+        <div class="score"> 
+            <div id="player_score"> ? </div>
+            <p> Player Score</p>
+        </div>
+        <div class="score">  
+            <div id="computer_score"> ? </div>
+            <p> Computer Score</p>
+        </div>
+    </div>
+    <br><br>
+    <div class="container">
+        <input type="button" id="btn1" onclick="myfunction();game()" value="ROCK">
+        <input type="button" id="btn2" onclick="myfunction1();game()" value="PAPER">
+        <input type="button" id="btn3" onclick="myfunction2();game()" value="SCISSORS">
+    </div>
+    <div id="#final"> </div> 
+</div>
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <p id="mod"> </p>
+      <button value="Restart" onclick="Restart()"> Restart game </button>
+    </div>
+</div>
+<footer>
+    Copyright © 2022 Vidhi Parikh
+</footer>
 </body>
-<script src="javascript.js"> </script>
 </html>
